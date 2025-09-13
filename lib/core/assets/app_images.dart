@@ -1,0 +1,36 @@
+class AppImages {
+  AppImages._();
+  static const logo = "assets/images/logo.png";
+  static const frame = "assets/images/f.png";
+  static const frame1 = "assets/images/f1.png";
+  static const frame2 = "assets/images/f2.png";
+  static const emtpy_bell = "assets/images/emtpy_bell.png";
+  static const ending = "assets/images/ending.png";
+  static const emtpy_cart = "assets/images/emtpy_cart.png";
+  static const Frame = "assets/images/Frame.png";
+  static const Frame1 = "assets/images/Frame (1).png";
+  static const Frame2 = "assets/images/Frame (2).png";
+  static const Frame3 = "assets/images/Frame (3).png";
+  static const Frame4 = "assets/images/Frame (4).png";
+  static const Frame5 = "assets/images/Frame (5).png";
+  static const Frame6 = "assets/images/Frame (6).png";
+  static const Frame7 = "assets/images/Frame (7).png";
+  static const Frame8 = "assets/images/Frame (8).png";
+  static const Frame9 = "assets/images/Frame (9).png";
+  static const Frame10 = "assets/images/Frame (10).png";
+  static const Frame11 = "assets/images/Frame (11).png";
+  static const Frame12 = "assets/images/Frame (12).png";
+  static const Frame13 = "assets/images/Frame (13).png";
+  static const Frame14 = "assets/images/Frame (14).png";
+  static const Frame15 = "assets/images/Frame (15).png";
+  static const Frame16 = "assets/images/Frame (16).png";
+  static const Frame17 = "assets/images/Frame (17).png";
+  static const Image1 = "assets/images/Image (1).png";
+  static const Image2 = "assets/images/Image (2).png";
+  static const Image3 = "assets/images/Image (3).png";
+  static const Image = "assets/images/Image.png";
+  static const group = "assets/images/Group.png";
+  static const maskGroup1 = "assets/images/Mask Group (1).png";
+  static const cardImage = "assets/images/Group (1).png";
+  static const maskGroup = "assets/images/Mask Group.png";
+}

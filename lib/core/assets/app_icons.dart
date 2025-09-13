@@ -1,0 +1,42 @@
+class AppIcons {
+  AppIcons._();
+  static const String x = "assets/Icons/X.png";
+  static const String arrow_left_outline =
+      "assets/Icons/Arrow Left-Outline.png";
+  static const String bell_outline = "assets/Icons/Bell-Outline.png";
+  static const String calendar = "assets/Icons/Calendar.png";
+  static const String card_outline = "assets/Icons/Card-Outline.png";
+  static const String cart_fill = "assets/Icons/Cart-Fill.png";
+  static const String chat_fill = "assets/Icons/Chat-Fill.png";
+  static const String check = "assets/Icons/Check.png";
+  static const String chevron_down = "assets/Icons/Chevron-Down.png";
+  static const String chevron_left = "assets/Icons/Chevron-Left.png";
+  static const String chevron_right = "assets/Icons/Chevron-Right.png";
+  static const String chevron_up = "assets/Icons/Chevron-Up.png";
+  static const String email_fill = "assets/Icons/Email-Fill.png";
+  static const String faqs_fill = "assets/Icons/FAQs-Fill.png";
+  static const String fire = "assets/Icons/Fire.png";
+  static const String folder_fill = "assets/Icons/Folder-Fill.png";
+  static const String home_fill = "assets/Icons/Home-Fill.png";
+  static const String location_fill = "assets/Icons/Location-Fill.png";
+  static const String location_outline = "assets/Icons/Location-outline.png";
+  static const String love_fill = "assets/Icons/Love-Fill.png";
+  static const String menu_fill = "assets/Icons/Menu-Fill.png";
+  static const String minus = "assets/Icons/Minus.png";
+  static const String moon_outline = "assets/Icons/Moon-Outline.png";
+  static const String phone_fill = "assets/Icons/Phone-Fill.png";
+  static const String phone_outline = "assets/Icons/Phone-Outline.png";
+  static const String plus = "assets/Icons/Plus.png";
+  static const String profile_fill = "assets/Icons/Profile-Fill.png";
+  static const String search = "assets/Icons/Search.png";
+  static const String star = "assets/Icons/Star.png";
+  static const String wallet_fill = "assets/Icons/Wallet-Fill.png";
+  static const String password_outline = "assets/Icons/Password-Outline.png";
+  static const String group934  = "assets/Icons/Group934 .png";
+  static const String group9342 = "assets/Icons/Group 934.png";
+  static const String Group935 = "assets/Icons/Group935.png";
+  static const String Group9352 = "assets/Icons/Group 935.png";
+  static const String less = "assets/Icons/Less.png";
+  static const String add = "assets/Icons/Add.png";
+  static const String gps = "assets/Icons/GPS-Fill.png";
+}
