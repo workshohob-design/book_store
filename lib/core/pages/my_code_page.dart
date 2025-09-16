@@ -5,6 +5,7 @@ import 'package:book_store/core/theme/app_colors.dart';
 import 'package:book_store/core/theme/app_text_style.dart';
 import 'package:book_store/core/widgets/my_bottom.dart';
 import 'package:book_store/core/widgets/my_keybord.dart';
+import 'package:book_store/futures/forget_password/presintation/pages/my_new_pw_page.dart';
 import 'package:book_store/futures/home/presintation/pages/my_home_page.dart';
 import 'package:book_store/futures/sing_up_in/presintation/cubit/auth_cubit.dart';
 import 'package:book_store/futures/sing_up_in/presintation/cubit/auth_state.dart';
@@ -219,15 +220,28 @@ class _MyCodePageState extends State<MyCodePage> {
                               backgroundColor: AppColors.green100,
                             ),
                           );
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => BlocProvider(
-                                create: (context) => AuthCubit(),
-                                child: MySingInPage(),
+                          if (widget.type == "up") {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => BlocProvider(
+                                  create: (context) => AuthCubit(),
+                                  child: MySingInPage(),
+                                ),
                               ),
-                            ),
-                          );
+                            );
+                          } else {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => BlocProvider(
+                                  create: (context) => AuthCubit(),
+                                  child: MyNewPWPage(reset_token: state.messege,),
+                                ),
+                              ),
+                            );
+                          }
+
                           // Navigator();
                         }
                       },
@@ -247,21 +261,21 @@ class _MyCodePageState extends State<MyCodePage> {
                                       code.forEach((e) {
                                         i = "$i$e";
                                       });
-                                      try {
-                                        if (widget.type == "up") {
-                                          context.read<AuthCubit>().verify(
-                                            email: widget.mail!,
-                                            otp: i,
-                                          );
-                                        } else {
-                                          context
-                                              .read<AuthCubit>()
-                                              .forgetPWVerify(
-                                                email: widget.mail!,
-                                                otp: i,
-                                              );
-                                        }
-                                      } catch (e) {}
+                                      // try {
+                                      if (widget.type == "up") {
+                                        context.read<AuthCubit>().verify(
+                                          email: widget.mail!,
+                                          otp: i,
+                                        );
+                                      } else {
+                                        context
+                                            .read<AuthCubit>()
+                                            .forgetPWVerify(
+                                              email: widget.mail!,
+                                              otp: i,
+                                            );
+                                      }
+                                      // } catch (e) {}
                                     },
                             ),
                           ],

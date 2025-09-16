@@ -19,9 +19,10 @@ class AuthRepo {
       );
       final data = jsonDecode(response.body);
       if (response.statusCode == 200 || response.statusCode == 201) {
+        // print('success in repo');
         return data["msg"];
       }
-
+      // print('error in repo');
       throw data;
     } catch (e) {
       rethrow;
@@ -40,13 +41,11 @@ class AuthRepo {
       );
       final data = await jsonDecode(response.body);
       if (response.statusCode == 200 || response.statusCode == 201) {
-        // print("ok");
-        // print("${"!" * 50}");
+        // print('success in repo');
         return data["msg"];
       }
       // print(response.statusCode);
-      // print("error");
-      // print("${"!" * 50}");
+      // print('error in repo');
       throw data;
     } catch (e, s) {
       // print(s);
@@ -69,13 +68,11 @@ class AuthRepo {
       );
       final data = await jsonDecode(response.body);
       if (response.statusCode == 200 || response.statusCode == 201) {
-        // print("ok");
-        // print("${"!" * 50}");
+        // print('success in repo');
         return data["access_token"];
       }
       // print(response.statusCode);
-      // print("error");
-      // print("${"!" * 50}");
+      // print('error in repo');
       throw data;
     } catch (e, s) {
       // print(s);
@@ -96,13 +93,11 @@ class AuthRepo {
       );
       final data = await jsonDecode(response.body);
       if (response.statusCode == 200 || response.statusCode == 201) {
-        // print("ok");
-        // print("${"!" * 50}");
+        // print('success in repo');
         return data["msg"];
       }
-      print(response.statusCode);
-      // print("error");
-      // print("${"!" * 50}");
+      // print(response.statusCode);
+      // print('error in repo');
       throw data;
     } catch (e, s) {
       // print(s);
@@ -126,17 +121,48 @@ class AuthRepo {
       );
       final data = await jsonDecode(response.body);
       if (response.statusCode == 200 || response.statusCode == 201) {
-        // print("ok");
-        // print("${"!" * 50}");
+        // print('success in repo');
         return data["reset_token"];
       }
-      print(response.statusCode);
-      // print("error");
-      // print("${"!" * 50}");
+      // print(response.statusCode);
+      /// print('error in repo');
       throw data;
     } catch (e, s) {
       // print(s);
       // print(a);
+      rethrow;
+    }
+  }
+
+  Future<String> newPassWord({
+    required String reset_token,
+    required String new_password,
+  }) async {
+    print("entered to repo");
+    try {
+      final response = await http.post(
+        Uri.parse("https://fastapi-books-app.onrender.com/auth/reset-password"),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: jsonEncode({
+          "reset_token": reset_token,
+          "new_password": new_password,
+        }),
+      );
+      final data = await jsonDecode(response.body);
+      if (response.statusCode == 200 || response.statusCode == 201) {
+        print(response.statusCode);
+        print('success in repo');
+        return data["reset_token"];
+      }
+      print(response.statusCode);
+      print('error in repo');
+      throw data;
+    } catch (e, s) {
+      // print(s);
+      print(e);
       rethrow;
     }
   }

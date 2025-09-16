@@ -192,16 +192,16 @@ class _MySingUpPageState extends State<MySingUpPage> {
                       onPressed: state is AuthLoading
                           ? null
                           : () async {
-                              // if (_key.currentState?.validate() ?? false) {
-                              context.read<AuthCubit>().signUp(
-                                email: emailController.text.trim(),
-                                password: passwordController.text.trim(),
-                                name: nameController.text.trim(),
-                                // email: 'shohob1@gmail.com',
-                                // password: 'Teqweqweest1234',
-                                // name: 'shwqeweradsadohob',
-                              );
-                              // }
+                              if (_key.currentState!.validate()) {
+                                context.read<AuthCubit>().signUp(
+                                  email: emailController.text.trim(),
+                                  password: passwordController.text.trim(),
+                                  name: nameController.text.trim(),
+                                  // email: 'shohob1@gmail.com',
+                                  // password: 'Teqweqweest1234',
+                                  // name: 'shwqeweradsadohob',
+                                );
+                              }
                             },
                     ),
 

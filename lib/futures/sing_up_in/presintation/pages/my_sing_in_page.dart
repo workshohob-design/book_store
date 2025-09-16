@@ -129,8 +129,8 @@ class _MySingInPageState extends State<MySingInPage> {
                     BlocConsumer<AuthCubit, AuthState>(
                       listener: (BuildContext context, AuthState state) {
                         if (state is AuthMessege) {
-                          print("ok");
-                          print("${"#" * 50}");
+                          // print("ok");
+                          // print("${"#" * 50}");
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -144,8 +144,8 @@ class _MySingInPageState extends State<MySingInPage> {
                           );
                         }
                         if (state is AuthError ){
-                          print("error");
-                          print("${"#" * 50}");
+                          // print("error");
+                          // print("${"#" * 50}");
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               elevation: 10,

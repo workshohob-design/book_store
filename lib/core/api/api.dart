@@ -11,5 +11,6 @@ class Api {
   static const String logIn = "$baseUrl/auth/login";
   static const String forgetPassWord = "$baseUrl/auth/forgot-password";
   static const String forgetPassWordVerify = "$baseUrl/auth/verify-password-reset-otp";
+  static const String newPassWord = "$baseUrl/auth/reset-password";
   
 }
